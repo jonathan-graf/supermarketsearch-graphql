@@ -1,0 +1,24 @@
+{
+  "name": "supermarketsearch-graphql",
+  "version": "1.0.0",
+  "description": "Technology Stack https://i.imgur.com/URyxmnZ.png",
+  "main": "index.js",
+  "dependencies": {
+    "graphql-yoga": "^1.17.4",
+    "prisma-client-lib": "^1.26.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://jonathan-graf@github.com/jonathan-graf/supermarketsearch-graphql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jonathan-graf/supermarketsearch-graphql/issues"
+  },
+  "homepage": "https://github.com/jonathan-graf/supermarketsearch-graphql#readme"
+}
