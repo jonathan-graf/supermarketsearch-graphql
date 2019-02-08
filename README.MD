@@ -49,7 +49,7 @@ node ./src/index.js
 Located in `./src/config.js`
 
 # Sample GraphQL requests
-### Note: When adding or updating `Locations`, the middleware layer will determine if the address has changed and get geometry data from the Google Places API.  You should get the `Location` from the API afterwards to see the geometry data.  In order for it to work, you must enter an exact address, i.e. 123 Main Street, Oklahoma City, OK
+`Note: When adding or updating `Locations`, the middleware layer will determine if the address has changed and get geometry data from the Google Places API.  You should get the `Location` from the API afterwards to see the geometry data.  In order for it to work, you must enter a Google-friendly address, i.e. Beverly Hills, CA or 123 Main Street, Oklahoma City, OK`
 
 ### Query all organizations 
 ```graphql
@@ -154,8 +154,9 @@ query {
   }
 }
 ```
-```graphql
+
 ### Delete an event
+```graphql
 mutation {
   deleteEvent(
     where: {
