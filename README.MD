@@ -81,7 +81,7 @@ query {
 }
 ```
 
-### Query organizations by location */
+### Query organizations by location
 ```graphql
 query {
   organizationsByLocation (
