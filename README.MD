@@ -1,3 +1,12 @@
+# Introduction
+Originally completed for the job interview at Econify. 
+
+Requirements
+- Create, Read, Update, & Delete Locations & Events
+- Query and find all the locations & events belonging to an organization
+- Query a location(s) / event(s) and having the ability to find the organization it belongs to
+- (Bonus) When a user submits a location with an address, the latitude & longitude is gathered via the Google Places API
+
 References
 https://www.prisma.io/docs/
 https://www.howtographql.com
