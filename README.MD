@@ -8,9 +8,9 @@ Originally completed for the job interview at Econify.  Themed as the "Staten Is
 - (Bonus) When a user submits a location with an address, the latitude & longitude is gathered via the Google Places API
 
 # References
-https://www.prisma.io/docs/
-https://www.howtographql.com
-https://codesandbox.io/s/github/prisma-csb/graphql-example-ts/
+- https://www.prisma.io/docs/
+- https://www.howtographql.com
+- https://codesandbox.io/s/github/prisma-csb/graphql-example-ts/
 
 # Technology Stack
 <img src="https://i.imgur.com/URyxmnZ.png">
