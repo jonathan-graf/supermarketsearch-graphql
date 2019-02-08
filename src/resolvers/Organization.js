@@ -1,3 +1,5 @@
+// These define the One -> Many relationship between Organization and locations, events
+
 function locations(parent, args, context, info) {
   return context.prisma.organization({ id: parent.id }).locations()
 }

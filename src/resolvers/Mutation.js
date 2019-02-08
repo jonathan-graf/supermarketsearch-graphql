@@ -1,3 +1,5 @@
+// These functions define the API for CRUD operations
+
 function createEvent(root, args, context) {
   return context.prisma.createEvent({
     name: args.name,
@@ -17,7 +19,7 @@ function updateEvent(root, args, context) {
       name: args.name,
       description: args.description,
       eventTime: args.eventTime,
-    }, 
+    },
     where: {
       id: args.id,
     }
@@ -31,17 +33,20 @@ function deleteEvent(root, args, context) {
 }
 
 function createLocation(root, args, context) {
-  return context.prisma.createLocation({
+  // Initial save
+  let location = context.prisma.createLocation({
     name: args.name,
     address: args.address,
-    latitude: args.latitude,
-    longitude: args.longitude,
+    latitude: 0,
+    longitude: 0,
     organization: {
       connect: {
         id: args.organizationId,
       },
     },
   })
+
+  return location;
 }
 
 function updateLocation(root, args, context) {
@@ -51,7 +56,7 @@ function updateLocation(root, args, context) {
       address: args.address,
       latitude: args.latitude,
       longitude: args.longitude,
-    }, 
+    },
     where: {
       id: args.id,
     }

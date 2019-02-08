@@ -1,3 +1,5 @@
+// These functions define the API for queryable objects
+
 function info() {
     return `This is the API of Staten Island Supermarket Search`
 }
