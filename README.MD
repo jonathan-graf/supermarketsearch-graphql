@@ -17,17 +17,17 @@ Originally completed for the job interview at Econify.  Themed as the "Staten Is
 Image is from the Prisma documentation.
 
 ## Staten Island Supermarket Search API
-Serves as a GraphQL-based facade layer to expose the application schema
-Running on graphql-yoga
+- Serves as a GraphQL-based facade layer to expose the application schema
+- Running on graphql-yoga
 http://localhost:4000
 
 ## Prisma ORM Server (on Docker)
-Access to all generated ORM data schema functions
-http://localhost:4466/
+- Access to all generated ORM data schema functions
+- http://localhost:4466/
 
 ## MySQL database access (on Docker via phpmyadmin)
-Direct access to the SQL database
-http://localhost:8000
+- Direct access to the SQL database
+- http://localhost:8000
 
 # Getting started
 ```sh
