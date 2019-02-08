@@ -26,10 +26,14 @@ exports.updateGeometry = async (resolve, root, args, context, info) => {
     util.getJSON(options, function(statusCode, httpResult) {
       console.log("onResult: (" + statusCode + ")" + JSON.stringify(httpResult))
 
-      let lat = httpResult.candidates[0].geometry.location.lat
-      let lng = httpResult.candidates[0].geometry.location.lng
+      if (httpResult.candidates[0]) {
+        let lat = httpResult.candidates[0].geometry.location.lat
+        let lng = httpResult.candidates[0].geometry.location.lng
 
-      updateGeo(lat, lng, middlewareResult);
+        updateGeo(lat, lng, middlewareResult);
+      } else {
+        console.log("No geometry data found for: " + middlewareResult.address)
+      }
     })  
   }
 
