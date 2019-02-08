@@ -1,16 +1,30 @@
-# Application Schema
+"""
+GraphQL schema for the Staten Island Supermarket Search app
+"""
 
 scalar DateTime
 
 type Query {
+  """
+  A hard-coded response with the name of the application.
+  """
   info: String!
+  """
+  All supermarket organizations.  These are immutable.
+  """
   organizations: [Organization!]!
   organizationsByName(name: String!): [Organization] 
   organizationsByLocation(name: String!): [Organization] 
   organizationsByEvent(name: String!): [Organization]
   organization(id: ID!): Organization
+  """
+  Major supermarket events.
+  """
   events: [Event!]!
   event(id: ID!): Event
+  """
+  All Staten Island locations of supermarkets.
+  """
   locations: [Location!]!
   location(id: ID!): Location
 }
@@ -19,10 +33,17 @@ type Mutation {
   createEvent(name: String, eventTime: DateTime!, description: String!, organizationId: ID!): Event!
   updateEvent(id: ID!, name: String, eventTime: DateTime, description: String): Event!
   deleteEvent(id: ID!): Event
+  """
+  Creating a location will automatically retrieve the latitude and longitude from the Google Places API.
+  """
   createLocation(name: String!, address: String!, organizationId: ID!): Location!
+  """
+  Updating a location will automatically retrieve the latitude and longitude from the Google Places API.
+  """
   updateLocation(id: ID!, name: String, latitude: Float, longitude: Float, address: String): Location!
   deleteLocation(id: ID!): Location
 }
+
 
 type Organization {
   id: ID!
